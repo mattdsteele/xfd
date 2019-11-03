@@ -5,12 +5,12 @@ class: center, middle
 ### Matt Steele
 
 ---
-class: bigimg, middle
+class:  middle
 
 ![ifttt](assets/ifttt.png)
 
 ---
-class: bigimg, middle
+class:  middle
 
 ![ifttt](assets/ifttt-iss.png)
 
@@ -20,7 +20,7 @@ class: center, middle
 # GitHub Actions is IFTTT for Actions on GitHub
 
 ---
-class: bigimg, middle
+class: middle
 
 ![gh-actions](assets/gh-actions.png)
 
@@ -44,13 +44,33 @@ class: bigimg, middle
 
 # Lots of prebuilt Actions
 
+--
+
+* Workflows for 30+ languages
+--
+
+* Every Action is a repo
+--
+
+* Discover in GitHub Marketplace
+
 ---
+
+![](assets/action-1.png)
+
+---
+class: center, middle
 
 # Or, build your own
+--
+
+## With TypeScript!
+--
+
+### (Or a Docker container)
 
 ---
 
-* Generally available November 13
 * Think of it like IFTTT for anything on GH
 * You build it, runs on GitHub
 
@@ -63,6 +83,159 @@ Why better than others?
 
 ---
 
+# What can I use it for?
+--
+
+## CI
+--
+
+## CD
+--
+
+## Whatever you want
+
+---
+class: center, middle
+
+# Continuous Integration
+
+---
+class: center
+
+# Commit often, and
+--
+
+## Transpile
+--
+
+## Lint
+--
+
+## Test
+--
+
+## etc
+--
+
+# Klaxons on failure
+
+---
+
+class: center, middle
+
+![](assets/badge.png)
+
+---
+
+![](assets/ci.png)
+
+---
+
+# `.github/workflows/ci.yml`
+--
+
+```yaml
+name: Node CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: npm install, build, and test
+      run: |
+        npm ci
+        npm run build
+        npm test
+```
+
+---
+
+# `.github/workflows/ci.yml`
+
+```yaml
+*name: Node CI
+*
+*on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: npm install, build, and test
+      run: |
+        npm ci
+        npm run build
+        npm test
+```
+
+---
+
+# `.github/workflows/ci.yml`
+
+```yaml
+name: Node CI
+
+on: [push]
+
+jobs:
+  build:
+*   runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    - name: npm install, build, and test
+      run: |
+        npm ci
+        npm run build
+        npm test
+```
+
+---
+
+# `.github/workflows/ci.yml`
+
+```yaml
+name: Node CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+*   steps:
+*   - uses: actions/checkout@v1
+*   - uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+*   - name: npm install, build, and test
+      run: |
+        npm ci
+        npm run build
+        npm test
+```
+
+---
+class: center, middle
+
+# Demo: [mattdsteele/arnoldc.js](https://github.com/mattdsteele/arnoldc.js)
+
+---
 ## CI
 
 * Lots of CI actions available out of the box
@@ -113,24 +286,8 @@ Demo: merge-release automation https://github.com/mikeal/merge-release
 
 ---
 
-class: bigimg, middle
+* Generally available November 13
 
-![img](assets/contact1.jpg)
-
----
-class: bigimg, middle
-
-![img](assets/contact4.jpg)
-
----
-class: bigimg, middle
-
-![img](assets/contact2.jpg)
-
----
-class: bigimg, middle
-
-![img](assets/contact3.jpg)
 
 ---
 
@@ -157,7 +314,6 @@ class: middle
 
 # Demo
 
-![img](assets/joy-con.jpg)
 
 ---
 
@@ -186,7 +342,6 @@ class: center, middle
 
 ## No One Implemented
 
-![polyfills](assets/ce-v0.png)
 ???
 At least 50k
 ---
@@ -198,7 +353,6 @@ At least 50k
 
 ## Framework Lock-In
 
-.center[![polymer](assets/polymerjs.jpg)]
 ???
 ---
 # Web Component .weird[Weirdness]
@@ -239,9 +393,6 @@ class: image-list, center, middle
 
 # Browser Implemented
 
-![chrome](assets/chrome.png)
-![safari](assets/safari.png)
-![firefox](assets/firefox.png)
 
 ---
 
@@ -264,16 +415,10 @@ class: image-list, center, middle
 
 # Or add some sugar
 
-![polymer](assets/polymer.png)
-![skate](assets/skatejs.png)
-![nutmeg](assets/nutmeg.png)
-![stencil](assets/stencil.png)
-
 ---
 
 # Stencil
 
-![stencil](assets/stencil.png)
 
 * Code with TypeScript
 * Use JSX
@@ -322,7 +467,6 @@ export class MyComponent {
 
 # Github-Driven-Development
 
-![github](assets/github.png)
 
 ---
 
