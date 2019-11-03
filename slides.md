@@ -298,6 +298,26 @@ class: center, middle
 ### - Mary and Tom Poppendieck
 
 ---
+class: bigimg, center, middle
+
+![](assets/cat-tunnel.jpg)
+
+https://flic.kr/p/2cGj7Mp
+
+---
+
+# Automate:
+--
+
+* Deploys to Netlify/GitHub Pages/Heroku
+--
+
+* NPM publish
+--
+
+* AWS Lambda Function deploys
+
+---
 
 * npm publish https://github.com/actions/starter-workflows/blob/master/ci/npm-publish.yml
 
