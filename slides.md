@@ -1,6 +1,6 @@
 class: center, middle
 
-# Web Components Aren't .weird[Weird] Anymore
+# Automate Everything with GitHub Actions
 
 ### Matt Steele
 

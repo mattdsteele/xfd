@@ -1,28 +1,23 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Web Components</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-    <script src="vendor/remark-0.14.1.js"></script>
-    <script>
-      var slideshow = remark.create({
-        ratio: '16:9',
-        sourceUrl: 'slides.md',
-        navigation: {
-          scroll: false
-        }
-      });
 
-      console.group('Load Joy-Con Web Component');
-      console.log(`
-          const s = document.createElement('script');
-          s.src="https://unpkg.com/joy-con-element@0.1.0/dist/joy-con.js";
-          document.body.append(s);
-      `)
-      console.groupEnd();
-    </script>
-  </body>
+<head>
+  <title>Web Components</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <script src="vendor/remark-0.14.1.js"></script>
+  <script>
+    var slideshow = remark.create({
+      ratio: '16:9',
+      sourceUrl: 'slides.md',
+      navigation: {
+        scroll: false
+      }
+    });
+  </script>
+</body>
+
 </html>
