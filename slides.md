@@ -461,6 +461,50 @@ jobs:
 
 ---
 
+```ts
+import { context } from '@actions/github';
+```
+
+--
+
+```json
+{
+  "action": "opened",
+  "issue": {
+    "assignee": null,
+    "assignees": [],
+    "author_association": "OWNER",
+    "body": "Some info in the comment here.\r\n\r\n# Lol",
+    "comments_url": "https://api.github.com/repos/mattdsteele/salty-issue-detector/issues/2/comments",
+    "created_at": "2019-10-28T20:55:11Z",
+    "events_url": "https://api.github.com/repos/mattdsteele/salty-issue-detector/issues/2/events",
+    "html_url": "https://github.com/mattdsteele/salty-issue-detector/issues/2",
+    "user": {
+      "avatar_url": "https://avatars3.githubusercontent.com/u/389077?v=4",
+      "events_url": "https://api.github.com/users/mattdsteele/events{/privacy}",
+      "followers_url": "https://api.github.com/users/mattdsteele/followers",
+  ...
+}
+```
+
+---
+class: center, middle
+
+# [Salty Issues Detector](https://github.com/mattdsteele/salty-issue-detector)
+
+---
+class: bigimg, center, middle
+
+![](assets/gh-labs.png)
+
+---
+# GitHub Actions
+
+* GA November 13
+
+---
+exclude: true
+
 * https://help.github.com/en/github/automating-your-workflow-with-github-actions/creating-a-javascript-action
 * https://github.com/zeit/ncc Need to package dependencies up
 * Example context https://github.com/mattdsteele/salty-issue-detector/commit/bd8f07adc18a8da8290324e53570d260a40eec5e/checks?check_suite_id=285155748#step:3:5
@@ -468,24 +512,14 @@ jobs:
 * Labs is good way to learn the process
 
 
----
-
 ## Issues
 
 * Local testers (not working yet) https://github.com/nektos/act https://github.com/phishy/wflow
 
----
-
 * Generally available November 13
-
-
----
 
 * Think of it like IFTTT for anything on GH
 * You build it, runs on GitHub
-
-
----
 
 Why better than others?
 
