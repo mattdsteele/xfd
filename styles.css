@@ -1,0 +1,65 @@
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono);
+
+@font-face {
+  font-family: "Saucy AF";
+  src: url("assets/Saucy_AF.woff");
+}
+body {
+  font-family: "Droid Serif";
+}
+h1,
+h2,
+h3 {
+  font-family: "Yanone Kaffeesatz";
+  font-weight: normal;
+}
+.remark-slide-content h1 {
+  font-size: 4em;
+  margin-top: 10px;
+}
+.remark-slide-content h2 {
+  font-size: 2.5em;
+}
+.remark-code,
+.remark-inline-code {
+  font-family: "Ubuntu Mono";
+}
+
+.weird {
+  font-family: "Saucy AF";
+  color: crimson;
+}
+
+/* No one else will think this is funny */
+.bratz {
+  background-color: black;
+  color: pink;
+}
+.bratz h1,
+.bratz h2 {
+  font-family: "Comic Sans MS" !important;
+}
+
+img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+
+li {
+  font-size: 2em;
+}
+
+code.remark-code {
+  font-size: 24px;
+}
+
+.bigimg img {
+  height: 590px;
+}
+.image-list img {
+  display: inline-block;
+  height: 150px;
+}

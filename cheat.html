@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Components</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <joy-con side="r" left="y" right="a"></joy-con>
+    <script src="vendor/remark-0.14.1.js"></script>
+    <script src="https://unpkg.com/joy-con-element@0.1.0/dist/joy-con.js"></script>
+    <script>
+      var slideshow = remark.create({
+        ratio: '16:9',
+        sourceUrl: 'slides.md',
+        navigation: {
+          scroll: false
+        }
+      });
+    </script>
+  </body>
+</html>
