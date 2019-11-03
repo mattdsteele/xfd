@@ -69,17 +69,6 @@ class: center, middle
 
 ### (Or a Docker container)
 
----
-
-* Think of it like IFTTT for anything on GH
-* You build it, runs on GitHub
-
-
----
-
-Why better than others?
-
-* Forkable https://github.com/gimenete/github-jest-snapshots/pull/1
 
 ---
 
@@ -117,7 +106,7 @@ class: center
 ## etc
 --
 
-# Klaxons on failure
+# 🚨 Klaxons on failure 🚨
 
 ---
 
@@ -236,22 +225,79 @@ class: center, middle
 # Demo: [mattdsteele/arnoldc.js](https://github.com/mattdsteele/arnoldc.js)
 
 ---
-## CI
+# Matrix Builds
 
-* Lots of CI actions available out of the box
-* Matrix builds across Node versions & OSs
-* Badge https://help.github.com/en/github/automating-your-workflow-with-github-actions/configuring-a-workflow#adding-a-workflow-status-badge-to-your-repository
-* Node workflow https://github.com/actions/starter-workflows/blob/master/ci/node.js.yml
-
-Demo: CI on java-properties https://github.com/mattdsteele/java-properties/workflows/
-
-https://github.com/mattdsteele/java-properties/actions/new
+```yml
+runs-on: ${{ matrix.os }}
+strategy:
+  matrix:
+    os: [ubuntu-16.04, ubuntu-18.04]
+    node: [6, 8, 10]
+steps:
+  - uses: actions/setup-node@v1
+    with:
+      node-version: ${{ matrix.node }}
+```
 
 ---
 
-## CD
+# Conditional Builds
 
-> Mary and Tom Poppendieck asked, “How long would it take your organization to deploy a change that involves just one single line of code? Do you do this on a repeatable, reliable basis?”1 The time from deciding that you need to make a change to having it in production is known as the cycle time, and it is a vital metric for any project.
+```yml
+on:
+  push:
+    # Sequence of patterns matched against refs/heads
+    branches:    
+      - master         # Push events on master branch
+      - 'mona/octocat' # Push events to branches matching refs/heads/mona/octocat
+      - 'releases/**'  # Push events to branches matching refs/heads/releases/10
+    # Sequence of patterns matched against refs/tags
+    tags:        
+      - v1             # Push events to v1 tag
+      - v1.*           # Push events to v1.0, v1.1, and v1.9 tags
+```
+
+---
+
+# Failures
+
+![](assets/email.png)
+
+---
+
+# Slack Notifications
+
+```yml
+- name: Slack notification
+  if: failure()
+  env:
+    SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+    SLACK_CHANNEL: alerts # Optional
+  uses: Ilshidur/action-slack@master
+  with:
+    args: 'Build failed! {{ GITHUB_ACTION }} for Node ${{ matrix.node-version }}'
+```
+
+---
+class: bigimg, center, middle
+
+![](assets/secrets.png)
+
+---
+class: center, middle
+
+# Continuous Delivery
+
+---
+class: center, middle
+
+## How long would it take your organization to deploy a change that involves just one single line of code? 
+
+## Do you do this on a repeatable, reliable basis?
+
+### - Mary and Tom Poppendieck
+
+---
 
 * npm publish https://github.com/actions/starter-workflows/blob/master/ci/npm-publish.yml
 
@@ -288,6 +334,18 @@ Demo: merge-release automation https://github.com/mikeal/merge-release
 
 * Generally available November 13
 
+
+---
+
+* Think of it like IFTTT for anything on GH
+* You build it, runs on GitHub
+
+
+---
+
+Why better than others?
+
+* Forkable https://github.com/gimenete/github-jest-snapshots/pull/1
 
 ---
 
