@@ -5,22 +5,38 @@ class: center, middle
 ### Matt Steele
 
 ---
+class: center, middle
 
-## Automate Everything with GitHub Actions
+![ifttt](assets/ifttt.png)
 
-GitHub Actions are a new way to respond to anything that occurs on GitHub, and it's pretty amazing. You can use it to automatically run tests when you push new code, or publish to NPM if all the tests pass. But this is just the tip of the iceberg, let's automate everything we can (and some thing we probably shouldn't).
+---
+class: center, middle
+
+Pic of IFTTT idea
+
+---
+class: center, middle
+
+# Zapier
+
+Pic
+
+---
+class: center, middle
+
+# GitHub Actions is IFTTT for Actions on GitHub
 
 ---
 
-## IFTTT
+# Respond to:
 
-* "Glue Services"
-* Zapier https://zapier.com/
+* Code Pushes
+* New Issues
+* Pull Requests
+* Forks
+* Etc
 
 ---
-
-
-## GitHub Actions is IFTTT for actions on GitHub
 
 * Generally available November 13
 * Think of it like IFTTT for anything on GH
