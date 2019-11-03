@@ -5,6 +5,86 @@ class: center, middle
 ### Matt Steele
 
 ---
+
+## Automate Everything with GitHub Actions
+
+GitHub Actions are a new way to respond to anything that occurs on GitHub, and it's pretty amazing. You can use it to automatically run tests when you push new code, or publish to NPM if all the tests pass. But this is just the tip of the iceberg, let's automate everything we can (and some thing we probably shouldn't).
+
+---
+
+## IFTTT
+
+* "Glue Services"
+* Zapier https://zapier.com/
+
+---
+
+
+## GitHub Actions is IFTTT for actions on GitHub
+
+* Generally available November 13
+* Think of it like IFTTT for anything on GH
+* You build it, runs on GitHub
+
+
+---
+
+Why better than others?
+
+* Forkable https://github.com/gimenete/github-jest-snapshots/pull/1
+
+---
+
+## CI
+
+* Lots of CI actions available out of the box
+* Matrix builds across Node versions & OSs
+* Badge https://help.github.com/en/github/automating-your-workflow-with-github-actions/configuring-a-workflow#adding-a-workflow-status-badge-to-your-repository
+* Node workflow https://github.com/actions/starter-workflows/blob/master/ci/node.js.yml
+
+Demo: CI on java-properties https://github.com/mattdsteele/java-properties/workflows/
+
+https://github.com/mattdsteele/java-properties/actions/new
+
+---
+
+## CD
+
+> Mary and Tom Poppendieck asked, “How long would it take your organization to deploy a change that involves just one single line of code? Do you do this on a repeatable, reliable basis?”1 The time from deciding that you need to make a change to having it in production is known as the cycle time, and it is a vital metric for any project.
+
+* npm publish https://github.com/actions/starter-workflows/blob/master/ci/npm-publish.yml
+
+Demo: merge-release automation https://github.com/mikeal/merge-release
+
+
+---
+
+## Everything Else
+
+* https://help.github.com/en/github/automating-your-workflow-with-github-actions/events-that-trigger-workflows
+* Demo: Sentiment analysis of Issue, post comment if salty
+* Demo: Candy Dispenser
+
+
+---
+
+## JS Actions
+
+* https://help.github.com/en/github/automating-your-workflow-with-github-actions/creating-a-javascript-action
+* https://github.com/zeit/ncc Need to package dependencies up
+* Example context https://github.com/mattdsteele/salty-issue-detector/commit/bd8f07adc18a8da8290324e53570d260a40eec5e/checks?check_suite_id=285155748#step:3:5
+* Greet first issuer https://github.com/JJ/issue-greeting-action/blob/master/src/main.ts
+* Labs is good way to learn the process
+
+
+---
+
+## Issues
+
+* Local testers (not working yet) https://github.com/nektos/act https://github.com/phishy/wflow
+
+---
+
 class: bigimg, middle
 
 ![img](assets/contact1.jpg)

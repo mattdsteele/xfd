@@ -2,10 +2,6 @@
 @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono);
 
-@font-face {
-  font-family: "Saucy AF";
-  src: url("assets/Saucy_AF.woff");
-}
 body {
   font-family: "Droid Serif";
 }
@@ -25,21 +21,6 @@ h3 {
 .remark-code,
 .remark-inline-code {
   font-family: "Ubuntu Mono";
-}
-
-.weird {
-  font-family: "Saucy AF";
-  color: crimson;
-}
-
-/* No one else will think this is funny */
-.bratz {
-  background-color: black;
-  color: pink;
-}
-.bratz h1,
-.bratz h2 {
-  font-family: "Comic Sans MS" !important;
 }
 
 img {
