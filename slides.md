@@ -5,21 +5,14 @@ class: center, middle
 ### Matt Steele
 
 ---
-class: center, middle
+class: bigimg, middle
 
 ![ifttt](assets/ifttt.png)
 
 ---
-class: center, middle
+class: bigimg, middle
 
-Pic of IFTTT idea
-
----
-class: center, middle
-
-# Zapier
-
-Pic
+![ifttt](assets/ifttt-iss.png)
 
 ---
 class: center, middle
@@ -27,14 +20,33 @@ class: center, middle
 # GitHub Actions is IFTTT for Actions on GitHub
 
 ---
+class: bigimg, middle
 
-# Respond to:
+![gh-actions](assets/gh-actions.png)
+
+---
+
+# React to:
 
 * Code Pushes
 * New Issues
 * Pull Requests
 * Forks
 * Etc
+
+---
+
+# Respond With:
+
+* Whatever you want.
+
+---
+
+# Lots of prebuilt Actions
+
+---
+
+# Or, build your own
 
 ---
 
