@@ -2,7 +2,8 @@ class: center, middle
 
 # Automate Everything with GitHub Actions
 
-### Matt Steele
+## Matt Steele
+### @mattdsteele
 
 ---
 class:  middle
@@ -312,30 +313,153 @@ https://flic.kr/p/2cGj7Mp
 * Deploys to Netlify/GitHub Pages/Heroku
 --
 
-* NPM publish
+* AWS Lambda Function deploys
 --
 
-* AWS Lambda Function deploys
+* NPM publish
 
 ---
 
-* npm publish https://github.com/actions/starter-workflows/blob/master/ci/npm-publish.yml
+```yml
+jobs:
+  build:
+  # ...
 
-Demo: merge-release automation https://github.com/mikeal/merge-release
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: npm ci
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.npm_token}}
+```
 
+---
+class: center, middle
+
+# Demo: Publish [mattdsteele/arnoldc.js](https://github.com/mattdsteele/arnoldc.js/actions/new)
 
 ---
 
-## Everything Else
+# Publish your site
 
-* https://help.github.com/en/github/automating-your-workflow-with-github-actions/events-that-trigger-workflows
-* Demo: Sentiment analysis of Issue, post comment if salty
-* Demo: Candy Dispenser
+![](assets/deploy-netlify.png)
+---
+class: bigimg, center, middle
 
+![](assets/deploy-now.png)
+---
+class: bigimg, center, middle
+
+![](assets/deploy-firebase.png)
+---
+class: bigimg, center, middle
+
+![](assets/deploy-rsync.png)
+
+---
+class: center, middle
+
+# Choose Your Own Pipeline
+
+## https://github.com/mikeal/merge-release
+
+---
+class: center, middle
+
+# Everything Else
 
 ---
 
-## JS Actions
+* `create`
+* `delete`
+* `deployment`
+* `fork`
+* `issue_comment`
+* `issues` (`opened`, `edited`, `deleted`, `pinned`, `assigned`...)
+* `label`
+* `member`
+* `milestone`
+* `pull_request` (`opened`, `closed`, `locked`, `review_requested`...)
+* `watch`
+
+https://help.github.com/en/github/automating-your-workflow-with-github-actions/events-that-trigger-workflows
+---
+class: middle
+
+```yml
+on:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '*/15 * * * *'
+```
+
+---
+class:  middle
+
+![ifttt](assets/ifttt-iss.png)
+
+---
+class: bigimg, center, middle
+
+![ifttt](assets/particle-1-flip.png)
+
+---
+class: center, middle
+
+![ifttt](assets/particle-3.png)
+
+---
+class: bigimg, center, middle
+
+![ifttt](assets/particle-2.png)
+
+---
+class: center, middle
+
+# [github.com/mattdsteele/particle-action](https://github.com/marketplace/actions/particle-function)
+
+---
+class: middle
+
+```yml
+name: Dispense Candy
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: docker://mattdsteele/particle-github-action:latest
+      env:
+        FUNCTION_NAME: ${{ secrets.PARTICLE_FUNCTION_NAME }}
+        DEVICE_ID: ${{ secrets.PARTICLE_DEVICE_ID }}
+        ACCESS_TOKEN: ${{ secrets.PARTICLE_ACCESS_TOKEN }}
+```
+
+---
+
+# Writing your own Actions
+--
+
+* Code in TypeScript (or JS)
+--
+
+* `@actions/core`, `@actions/github`, `@actions/io`
+--
+
+* Starter Template: [typescript-action](https://github.com/actions/typescript-action)
+
+---
 
 * https://help.github.com/en/github/automating-your-workflow-with-github-actions/creating-a-javascript-action
 * https://github.com/zeit/ncc Need to package dependencies up
@@ -368,203 +492,9 @@ Why better than others?
 * Forkable https://github.com/gimenete/github-jest-snapshots/pull/1
 
 ---
-
 class: center, middle
 
-# .weird[Weird]ness
-
----
-class: center, middle
-
-# Web Components
-
---
-
-## (Custom HTML Elements)
-
---
-
-## They Are Awesome
-
----
-
-class: middle
-
-# Demo
-
-
----
-
-# They Just Work
---
-
-- Easy to use
-???
-No compile or Webkit necessary
---
-
-- Uses the platform
---
-
-- Works everywhere
-
----
-class: center, middle
-
-# Except They _Don't_ Just Work
-
----
-
-# Web Component .weird[Weirdness]
---
-
-## No One Implemented
-
-???
-At least 50k
----
-# Web Component .weird[Weirdness]
-
-## Take Me Down To The Polyfill City
----
-# Web Component .weird[Weirdness]
-
-## Framework Lock-In
-
-???
----
-# Web Component .weird[Weirdness]
-
-## Bespoke Tooling
-
-* HTML Imports
-* Bower
-* Custom Build Tools
----
-
-class: center, middle
-# No wonder React won
-
----
-class: bratz, center, middle
-
-# Five Years Later
-
----
-
-# .weird[Weird] stuff jettisoned
-
----
-
-# .weird[Weird] stuff jettisoned
-
-* ~~HTML Imports~~ ➡️ ES Modules
---
-
-* ~~Bower~~ ➡️ NPM
---
-
-* Webpack ✅
-
----
-class: image-list, center, middle
-
-# Browser Implemented
-
-
----
-
-# Vanilla Custom Elements
-
-```javascript
-class HelloWorld extends HTMLElement {
-  connectedCallback() {
-    this.render();
-  }
-
-  render() {
-    this.innerHTML = `<div>Hello World!</div>`;
-  }
-}
-customElements.define('hello-world', HelloWorld);
-```
----
-class: image-list, center, middle
-
-# Or add some sugar
-
----
-
-# Stencil
-
-
-* Code with TypeScript
-* Use JSX
-* Reactive Data Binding
-* Disappearing Framework
-
----
-# `<joy-con>` is a Stencil Component
-
-```typescript
-@Component({
-  tag: "joy-con",
-  styleUrl: "joy-con.css",
-  shadow: true
-})
-export class MyComponent {
-  @State() private initialized = false;
-  @Prop() side: "L" | "R";
-  @Prop() left: string;
-  @Prop() right: string;
-
-  /* etc */
-
-  render() {
-    return <JoyConIcon active={this.initialized} />;
-  }
-}
-```
-
----
-
-# Your framework exports them
-
-* Angular
-* Vue
-* Dojo
-* React (with a wrapper)
-
----
-
-# Use them in your apps
-
-* Great as "leaf nodes"
-
----
-
-# Github-Driven-Development
-
-
----
-
-# Others are using it
-
-- 📹 YouTube 
-- 🚂 UPRR 
-- ✨ Stellar 
-
----
-class: center, middle
-
-# Try Web Components Out
-
-## It's better than an eyeball full of glass
-
----
-class: center, middle
-
-# Web Components Aren't .weird[Weird] Anymore
+# Automate Everything with GitHub Actions
 
 ## Matt Steele
 ### @mattdsteele

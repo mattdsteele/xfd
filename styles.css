@@ -2,9 +2,17 @@
 @import url(https://fonts.googleapis.com/css?family=Droid+Serif);
 @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono);
 
+:root {
+  --link-color: #005cff;
+}
+
 body {
   font-family: "Droid Serif";
 }
+a,a:visited {
+  color: var(--link-color);
+}
+
 h1,
 h2,
 h3 {
