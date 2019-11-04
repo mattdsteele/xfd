@@ -508,6 +508,8 @@ class: bigimg, center, middle
 # GitHub Actions
 
 * GA November 13
+* Free for public repos
+* Free tier (2,000 mins/mo) for private repos
 
 ---
 exclude: true
