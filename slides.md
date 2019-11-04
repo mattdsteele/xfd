@@ -467,24 +467,28 @@ import { context } from '@actions/github';
 
 --
 
-```json
+```js
 {
-  "action": "opened",
-  "issue": {
-    "assignee": null,
-    "assignees": [],
-    "author_association": "OWNER",
-    "body": "Some info in the comment here.\r\n\r\n# Lol",
-    "comments_url": "https://api.github.com/repos/mattdsteele/salty-issue-detector/issues/2/comments",
-    "created_at": "2019-10-28T20:55:11Z",
-    "events_url": "https://api.github.com/repos/mattdsteele/salty-issue-detector/issues/2/events",
-    "html_url": "https://github.com/mattdsteele/salty-issue-detector/issues/2",
-    "user": {
-      "avatar_url": "https://avatars3.githubusercontent.com/u/389077?v=4",
-      "events_url": "https://api.github.com/users/mattdsteele/events{/privacy}",
-      "followers_url": "https://api.github.com/users/mattdsteele/followers",
-  ...
+  action: "opened",
+  issue: {
+    assignee: null,
+    assignees: [],
+    author_association: "OWNER",
+    body: "Some info in the comment here.\r\n\r\n# Lol",
+    comments_url: "https://api.github.com/repos/mattdsteele/salty-issue-detector/issues/2/comments",
+    created_at: "2019-10-28T20:55:11Z",
+    events_url: "https://api.github.com/repos/mattdsteele/salty-issue-detector/issues/2/events",
+    html_url: "https://github.com/mattdsteele/salty-issue-detector/issues/2",
+    user: {
+      avatar_url: "https://avatars3.githubusercontent.com/u/389077?v=4",
+      events_url: "https://api.github.com/users/mattdsteele/events{/privacy}",
+      followers_url: "https://api.github.com/users/mattdsteele/followers"
+    }
+    // ...
+  }
+  // ...
 }
+
 ```
 
 ---
