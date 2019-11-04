@@ -506,6 +506,7 @@ class: bigimg, center, middle
 
 * TypeScript Actions need transpiled and their `node_modules` checked in
 * [zeit/ncc](https://github.com/zeit/ncc) is a good option
+* Issues using an Action? [Fork it!](https://github.com/gimenete/github-jest-snapshots/pull/1)
 * Integration testing `¯\_(ツ)_/¯`
 
 ---
