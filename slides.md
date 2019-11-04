@@ -498,6 +498,13 @@ class: bigimg, center, middle
 ![](assets/gh-labs.png)
 
 ---
+# Pro Tips
+
+* TypeScript Actions need transpiled and their `node_modules` checked in
+* [zeit/ncc](https://github.com/zeit/ncc) is a good option
+* Integration testing `¯\_(ツ)_/¯`
+
+---
 # GitHub Actions
 
 * GA November 13
