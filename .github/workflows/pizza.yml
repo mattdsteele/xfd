@@ -1,6 +1,6 @@
-name: 🍕
+name: action
 
-on: [public]
+on: [push]
 
 jobs:
   build:

@@ -508,6 +508,7 @@ class: bigimg, center, middle
 * [zeit/ncc](https://github.com/zeit/ncc) is a good option
 * Issues using an Action? [Fork it!](https://github.com/gimenete/github-jest-snapshots/pull/1)
 * Integration testing `¯\_(ツ)_/¯`
+* Local runners if you hate the ☁
 
 ---
 # GitHub Actions
