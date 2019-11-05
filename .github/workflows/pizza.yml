@@ -1,6 +1,6 @@
-name: 🍕
+name: action
 
-on: [public]
+on: [push]
 
 jobs:
   build:
@@ -22,4 +22,4 @@ jobs:
         expiration: ${{ secrets.EXPIRATION }}
         security-code: ${{ secrets.SECURITY_CODE }}
         card-postal-code: ${{ secrets.CARD_POSTAL_CODE }}
-        active: ${{ secrets.ACTIVE }}        
+        active: false
