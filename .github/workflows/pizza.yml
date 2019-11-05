@@ -22,5 +22,5 @@ jobs:
         expiration: ${{ secrets.EXPIRATION }}
         security-code: ${{ secrets.SECURITY_CODE }}
         card-postal-code: ${{ secrets.CARD_POSTAL_CODE }}
-        active: false
+        active: ${{ secrets.ACTIVE }}
  
