@@ -1,6 +1,6 @@
 class: center, middle
 
-# Automate Everything with GitHub Actions
+# Extreme Feedback Devices
 
 ## Matt Steele
 ### @mattdsteele
