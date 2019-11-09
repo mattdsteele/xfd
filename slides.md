@@ -156,7 +156,7 @@ class: center, middle
 ---
 
 class: center
-# Make You're Own
+# Make Your Own
 
 --
 
