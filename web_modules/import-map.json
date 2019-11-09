@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "hotkeys-js": "./hotkeys-js.js"
+  }
+}

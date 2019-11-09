@@ -12,5 +12,8 @@
   "devDependencies": {
     "http-server": "^0.11.1",
     "netlify-cli": "^2.20.2"
+  },
+  "dependencies": {
+    "hotkeys-js": "^3.7.2"
   }
 }
