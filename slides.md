@@ -52,9 +52,9 @@ class: center, middle
 ![](https://www.vegard.net/wp-content/uploads/2012/03/2011-02-11-14.42.21.jpeg)
 
 ---
-class: center, middle
+class: center, middle, giant
 
-# 🚨 Klaxons on failure 🚨
+# Klaxons on failure 🚨
 
 ---
 class: center, middle, giant
@@ -154,8 +154,9 @@ class: center, middle, bigimg
 class: center, middle
 <video src="assets/candy.mp4" controls></video>
 ---
+
 class: center
-# Make Your Own
+# Make You're Own
 
 --
 
@@ -169,6 +170,11 @@ class: center
 --
 
 ## Have fun
+
+---
+class: center, middle, giant
+
+# Techreative
 
 ---
 class: center, middle
